@@ -19,9 +19,9 @@ find . -name '*ko' -exec cp '{}' ../out/flashable/system/lib/modules/ \;
 
 cd ../out/tools
 
-#./split_boot boot_add.img
 ./mkbootimg --kernel ../zImage --ramdisk ramdisk.cpio.gz --ramdiskaddr 0x0049C4F0  -o ../flashable/kernel/boot.img
 
 cd ../flashable
 
 zip -r kernel.zip kernel META-INF system
+
